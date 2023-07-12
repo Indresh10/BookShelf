@@ -1,6 +1,9 @@
 package com.example.bookshelf.ui.screens
 
+import android.annotation.SuppressLint
+import android.os.Build
 import android.text.Html
+import android.text.Layout.JUSTIFICATION_MODE_INTER_WORD
 import android.widget.TextView
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -138,6 +141,7 @@ fun BookDetailPreview() {
     BookDetailLayout(book = getDefaultBook())
 }
 
+@SuppressLint("WrongConstant")
 @Composable
 fun HTMLText(text: String, modifier: Modifier = Modifier) {
     val htmlText = "<div>$text</div>"
@@ -149,6 +153,9 @@ fun HTMLText(text: String, modifier: Modifier = Modifier) {
             setText(html)
             setTextColor(txtColor.toArgb())
             textSize = fontSize.value
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                justificationMode = JUSTIFICATION_MODE_INTER_WORD
+            }
         }
     })
 }
