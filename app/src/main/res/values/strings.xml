@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BookShelf</string>
+    <string name="search">Search</string>
+    <string name="no_internet">Can\'t Load Data from Internet</string>
+    <string name="retry">Retry</string>
+    <string name="search_to_get_results">Search for any topic for Books\n press 🔍 for Results</string>
+    <string name="back_button">Back Button</string>
+    <string name="book_details">Book Details</string>
+</resources>
